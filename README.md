@@ -1,13 +1,12 @@
-# Project Name
+# Menu
 
-> Project description
+> Menu module for a restaurant service
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/CuisineInc/Reviews
+  - https://github.com/CuisineInc/Reservations
+  - https://github.com/CuisineInc/Photo-Gallery
 
 ## Table of Contents
 
@@ -18,6 +17,17 @@
 ## Usage
 
 > Some usage instructions
+
+To seed database run
+```sh
+npm run seed
+```
+
+To start server and webpack watch
+```sh
+server-dev
+react-dev
+```
 
 ## Requirements
 
@@ -37,3 +47,46 @@ npm install -g webpack
 npm install
 ```
 
+## RESTful API
+
+### CRUD Operations
+- Creating (POST)
+```sh
+app.post
+url: "/api/:restaurantName/menu"
+input:
+{ mealOptions,
+  foodCategories,
+  foodName: {
+    foodDescription,
+    foodPrice
+  }
+}
+```
+- Reading (GET)
+```sh
+app.get
+url: "/api/:restaurantName/menu"
+input:
+{ menuId }
+```
+- Updating (PUT)
+```sh
+app.put
+url: "/api/:restaurantName/menu"
+input:
+{ menuId,
+mealOptions,
+  foodCategories,
+  foodName: {
+    foodDescription,
+    foodPrice
+  }
+}
+```
+- Deleting (DELETE)
+```sh
+app.delete
+url: "/api/:restaurantName/menu"
+input: { menuId }
+```
