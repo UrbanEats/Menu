@@ -55,38 +55,54 @@ npm install
 app.post
 url: "/api/:restaurantName/menu"
 input:
-{ mealOptions,
-  foodCategories,
+{ mealOptions: string,
+  foodCategories: string,
   foodName: {
-    foodDescription,
-    foodPrice
+    foodDescription: string,
+    foodPrice: decimal number
   }
 }
+response:
+post success message, menuId
 ```
 - Reading (GET)
 ```sh
 app.get
 url: "/api/:restaurantName/menu"
 input:
-{ menuId }
+{ menuId: integer }
+response:
+{ menuId: integer,
+mealOptions: string,
+  foodCategories: string,
+  foodName: {
+    foodDescription: string,
+    foodPrice: decimal number
+  }
+}
 ```
 - Updating (PUT)
 ```sh
 app.put
 url: "/api/:restaurantName/menu"
 input:
-{ menuId,
-mealOptions,
-  foodCategories,
+{ menuId: integer,
+mealOptions: string,
+  foodCategories: string,
   foodName: {
-    foodDescription,
-    foodPrice
+    foodDescription: string,
+    foodPrice: decimal number
   }
 }
+response:
+put success message, menuId
+
 ```
 - Deleting (DELETE)
 ```sh
 app.delete
 url: "/api/:restaurantName/menu"
-input: { menuId }
+input: { menuId: integer }
+response:
+delete success message
 ```
