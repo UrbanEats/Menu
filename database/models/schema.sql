@@ -1,4 +1,6 @@
 
+DROP TABLE IF EXISTS restaurants;
+
 DROP TABLE IF EXISTS meals;
 
 CREATE TABLE meals (
@@ -10,4 +12,3 @@ CREATE TABLE meals (
   meal_description VARCHAR(250) NOT NULL,
   meal_price INTEGER NOT NULL
 );
-

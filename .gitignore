@@ -1,6 +1,7 @@
 database/models/postgres_config.js
 database/models/notes.js
-database/models/menus_for_psql.csv
+database/models/menus.csv
+database/models/data/
 
 ## MAC files ##
 .DS_Store
