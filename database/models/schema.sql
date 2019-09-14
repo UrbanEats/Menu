@@ -10,5 +10,5 @@ CREATE TABLE meals (
   food_category VARCHAR(50) NOT NULL,
   meal_name VARCHAR(50) NOT NULL,
   meal_description VARCHAR(250) NOT NULL,
-  meal_price INTEGER NOT NULL
+  meal_price SMALLINT NOT NULL
 );

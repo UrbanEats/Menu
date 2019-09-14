@@ -47,6 +47,12 @@ npm install -g webpack
 npm install
 ```
 
+
+## Seeding Database
+```sh
+
+```
+
 ## RESTful API
 
 ### CRUD Operations
