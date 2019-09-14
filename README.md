@@ -75,14 +75,13 @@ CREATE INDEX r_id ON meals (restaurant_id);
 ### CRUD Operations
 - Creating (POST)
 ```sh
-app.post
-url: "/api/:restaurantName/menu"
+url: "/api/restaurants/:rid/menu"
 input:
-{ mealOptions: string,
-  foodCategories: string,
-  foodName: {
-    foodDescription: string,
-    foodPrice: decimal number
+{ food_option: string,
+  food_category: string,
+  meal_name: {
+    meal_description: string,
+    meal_price: decimal number
   }
 }
 response:
@@ -90,42 +89,36 @@ post success message, menuId
 ```
 - Reading (GET)
 ```sh
-app.get
-url: "/api/:restaurantName/menu"
-input:
-{ menuId: integer }
+url: "/api/restaurants/:rid/menu"
 response:
 { menuId: integer,
-mealOptions: string,
-  foodCategories: string,
-  foodName: {
-    foodDescription: string,
-    foodPrice: decimal number
+food_option: string,
+  food_category: string,
+  meal_name: {
+    meal_description: string,
+    meal_price: decimal number
   }
 }
 ```
 - Updating (PUT)
 ```sh
-app.put
-url: "/api/:restaurantName/menu"
+url: "/api/restaurants/:rid/menu"
 input:
 { menuId: integer,
-mealOptions: string,
-  foodCategories: string,
-  foodName: {
-    foodDescription: string,
-    foodPrice: decimal number
+food_option: string,
+  food_category: string,
+  meal_name: {
+    meal_description: string,
+    meal_price: decimal number
   }
 }
 response:
 put success message, menuId
-
+ 
 ```
 - Deleting (DELETE)
 ```sh
-app.delete
-url: "/api/:restaurantName/menu"
-input: { menuId: integer }
+url: "/api/restaurants/:rid/menu"
 response:
 delete success message
 ```
