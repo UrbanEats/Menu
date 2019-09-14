@@ -1,6 +1,4 @@
 
-DROP TABLE IF EXISTS restaurants;
-
 DROP TABLE IF EXISTS meals;
 
 CREATE TABLE meals (

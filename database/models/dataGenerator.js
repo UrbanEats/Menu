@@ -41,13 +41,3 @@ const generateMenus = (count) => {
 
 generateMenus(10000000);
 // 10000000
-
-// const generateRestaurants = (count) => {
-//   const restaurants = [];
-//   for (var i = 0; i < count; i ++) {
-//     const r_name = 'r' + i;
-//     restaurants.push(r_name);
-//   }
-//   console.log(restaurants.length);
-// }
-// generateRestaurants(10000000);

@@ -1,5 +1,4 @@
 database/models/postgres_config.js
-database/models/notes.js
 database/models/data/
 
 ## MAC files ##
