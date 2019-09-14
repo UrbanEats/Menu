@@ -14,6 +14,7 @@
 1. [Development](#development)
 1. [Usage](#Usage)
 1. [Data-Generation](#Data-Generation)
+1. [API-Routes](#API-Routes)
 
 ## Requirements
 
@@ -83,9 +84,9 @@ Exit then run the schema file to create a table.
 cqlsh -f database/models/schema.sql -k opentable
 ```
 
-## RESTful API
+## API-Routes
 
-### CRUD Operations
+### RESTful API CRUD Operations
 - Creating (POST)
 ```sh
 url: "/api/restaurants/:rid/menu"
