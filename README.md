@@ -47,12 +47,29 @@ npm install -g webpack
 npm install
 ```
 
-
 ## Seeding Database
+### Postgres Database
+In command line, initialize postgres, create/connect to the database, if haven't already.
 ```sh
-
+psql postgres
+\l
+create database restaurants
+\c restaurants
 ```
-
+Run the schema file
+```sh
+psql -d restaurants -a -f database/models/schema.sql
+```
+Run the data generation script, which outputs a file named menus.csv. Will take 15 minutes.
+```sh
+node database/models/dataGenerator.js
+```
+Now there is a file in database/models/data named menus.csv. Import it into your postgres database. Then add an index on the restaurant_id.
+```sh
+psql postgres
+\COPY meals(restaurant_id,food_option,food_category,meal_name,meal_description,meal_price) FROM '/filepath/menus.csv' DELIMITER ',' CSV HEADER;
+CREATE INDEX r_id ON meals (restaurant_id);
+```
 ## RESTful API
 
 ### CRUD Operations
