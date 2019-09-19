@@ -1,7 +1,9 @@
 
-DROP TABLE IF EXISTS meals;
+USE opentable; 
 
-CREATE TABLE meals (
+DROP TABLE IF EXISTS menus;
+
+CREATE TABLE menus (
   id INT,
   restaurant_id INT,
   food_option TEXT,
@@ -9,5 +11,5 @@ CREATE TABLE meals (
   meal_name TEXT,
   meal_description TEXT,
   meal_price INT,
-  PRIMARY KEY (id, restaurant_id)
+  PRIMARY KEY (restaurant_id, id)
 );
